@@ -1,0 +1,44 @@
+﻿@model U2Ejericio4.Models.ViewModels.MapaViewModel;
+@{
+    Layout = "Layout";
+}
+
+<h1>
+    <a class="btn" href="javascript: history.back()">&#x25c0; Regresar</a>
+    @Model.NombreCarrera
+</h1>
+
+
+
+<h2>@Model.Plan</h2>
+<h2>Total de creditos: @Model.Creditos</h2>
+<section class="reticula">
+    <table>
+        <thead>
+            <tr>
+                @foreach(var n in Model.Semestre)
+                {
+                    
+                <th>@n.NumeroSemestre</th>
+                }
+            </tr>
+        </thead>
+        <tr>
+            @foreach(var n in Model.Semestre)
+            {
+                <td>
+                    @foreach(var m in n.Materias)
+                    {
+                     <div class="materia">
+                      <span class="Clave>@m.Clave</span>
+                      <span class="nombre">@m.Nombre</span>
+                       <span class="tpc">@m.Creditos</span>
+                      </div>
+                        
+                    }
+                </td>
+            }
+        </tr>
+    </table>
+</section>
+

@@ -1,0 +1,24 @@
+﻿@model U2Ejericio4.Models.ViewModels.InformacionViewModel;
+@{
+    Layout = "Layout";
+}
+<h1>
+    <a class="btn" href="javascript: history.back()">&#x25c0;  Regresar</a>
+
+ @Model.Nombre
+</h1>
+
+<div class="info">
+    <img src="~/images/@(Model.Id).jpg" />
+    <a class="btn" href="~/@Model.Nombre.Replace("","-")/Retiula">Ver mapa curricular</a>
+</div>
+<div class="info">
+    <dl>
+        <dt>@Model.Descripcion</dt>
+        <dd>Aplica los fundamentos de la ciencia de la computación, la ingeniería electrónica, la ingeniería de software y la ingeniería de telecomunicaciones, para el desarrollo de soluciones integrales de cómputo y comunicaciones, capaces de procesar información de manera automática.</dd>
+        <dt>Plan de estudios:</dt>
+        <dd>ISIC-2010-224</dd>
+        <dt>Especialidad:</dt>
+        <dd>Desarrollo Web y Aplicaciones Moviles</dd>
+    </dl>
+</div>
